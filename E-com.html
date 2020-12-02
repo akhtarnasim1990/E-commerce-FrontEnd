@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Cool Veggies and Fruits</title>
+        <link rel="shortcut icon" href="E-com-imgs/icon.png">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="E-com.css/E-com.css">
+        
+        <style>
+          
+        </style>
+
+    </head>
+    <body>
+      <script src="/E-com.jsfolder/E-com.js"></script>
+
+      <script>
+
+      </script>  
+      
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"></a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#"> <strong> Best Veggies </strong> </a></li>
+                  <li><a href="#">Products</a></li>
+                  <li><a href="#">Deals</a></li>
+                  <li><a href="#">Stores</a></li>
+                  <li><a href="#">Contact</a></li>
+                 <li>
+                    <div id="nav_search_container" >
+                        <form action="/action_page.php">
+                           <input type="text" id="search_product" onkeyup="searchProduct()" placeholder="Search..." name="search" title="Type in a name">
+                           <button type="submit"><i class="fa fa-search"></i></button>
+                       </form>
+                    </div>
+                 </li>
+                 <li>
+                   <div class="dropdown" id="myBtnContainer">
+                    <button class="dropbtn active">Products</button>
+                    <div class="dropdown-content" id="filterP">
+                      <a href="#" class="btn" onclick="filterSelection('all')">All</a>
+                      <a href="#" class="btn" onclick="filterSelection('fruit')">Fruits</a>
+                      <a href="#" class="btn" onclick="filterSelection('vegitable')">Vegetables</a>
+                    </div>
+                  </div>  
+                 </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>      
+        <div id="product_list">
+          <div class="container">
+            <div class="row">
+              <div id="tomatoDiv" class="col-sm-4 vegetable">
+                <div class="panel panel-primary ">
+                  <div class="panel-heading">Tomatoes </div>
+                  <div class="panel-body"><img id="tomatoImg" src="cart Images/tomato.jpg" class="img-responsive"
+                      style="width:100%; height: 250px;" alt="Image" onmouseover="onHover('tomatoDiv')" onmouseout="onHoverout('tomatoDiv')"></div>
+                  <div class="panel-footer">
+                    <button id="tomatoButton" type="button" class="btn btn-primary">Buy
+                      Tomato's</button>
+                      <a href="E-com-cart.html">
+                        <button id="cartBtn1" type="button" class="btn btn-primary" style="float: right;">Add to Cart</button>
+                      </a>
+                  </div>
+                </div>
+              </div>
+              <div id="cucumberDiv" class="col-sm-4 vegetable">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">Cucumber</div>
+                  <div class="panel-body"><img src="cart Images/cucumber.jpg" class="img-responsive"
+                      style="width:100%;  height: 250px;" alt="Image" onmouseover="onHover('cucumberDiv')" onmouseout="onHoverout('cucumberDiv')"></div>
+                  <div class="panel-footer">
+                    <button id="tomatoButton" type="button" class="btn btn-primary">Buy Cucumber's
+                      </button>
+                      <a href="E-com-cart.html">
+                        <button id="cartBtn1" type="button" class="btn btn-primary" style="float: right;">Add to Cart</button>
+                      </a>
+                    </div>
+                </div>
+              </div>
+              <div id="chilliDiv" class="col-sm-4 vegetable">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">Chilli's</div>
+                  <div class="panel-body"><img src="cart Images/chilli.jpg" class="img-responsive"
+                      style="width:100%; height: 250px" alt="Image" onmouseover="onHover('chilliDiv')" onmouseout="onHoverout('chilliDiv')"></div>
+                  <div class="panel-footer">
+                    <button id="tomatoButton" type="button" class="btn btn-primary">Buy Chilli's
+                      </button>
+                      <a href="E-com-cart.html">
+                        <button id="cartBtn1" type="button" class="btn btn-primary" style="float: right;">Add to Cart</button>
+                      </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div><br>
+        
+          <div class="container">
+            <div class="row ">
+              <div id="strawberryDiv" class="col-sm-4 fruit">
+                <div class="panel panel-primary ">
+                  <div class="panel-heading">Strawberry's </div>
+                  <div class="panel-body"><img id="strawberyImg" src="cart Images/strawbery.jpg" class="img-responsive"
+                      style="width:100%; height: 250px;" alt="Image" onmouseover="onHover('strawberryDiv')" onmouseout="onHoverout('strawberryDiv')"></div>
+                  <div class="panel-footer">
+                    <button id="tomatoButton" type="button" class="btn btn-primary">Buy Strawberry's
+                      </button>
+                      <a href="E-com-cart.html">
+                        <button id="cartBtn1" type="button" class="btn btn-primary" style="float: right;">Add to Cart</button>
+                      </a>
+                    </div>
+                </div>
+              </div>
+              <div id="mangoDiv" class="col-sm-4 fruit">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">Mango's</div>
+                  <div class="panel-body"><img src="cart Images/mango.jpg" class="img-responsive"
+                      style="width:100%;  height: 250px;" alt="Image" onmouseover="onHover('mangoDiv')" onmouseout="onHoverout('mangoDiv')"></div>
+                  <div class="panel-footer">
+                    <button id="tomatoButton" type="button" class="btn btn-primary">Buy Mango's
+                      </button>
+                      <a href="E-com-cart.html">
+                        <button id="cartBtn1" type="button" class="btn btn-primary" style="float: right;">Add to Cart</button>
+                      </a>
+                    </div>
+                </div>
+              </div>
+              <div id="pineappleDiv" class="col-sm-4 fruit">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">Pineapple's</div>
+                  <div class="panel-body"><img src="cart Images/pineapple.jpg" class="img-responsive"
+                      style="width:100%; height: 250px" alt="Image" onmouseover="onHover('pineappleDiv')" onmouseout="onHoverout('pineappleDiv')"></div>
+                  <div class="panel-footer">
+                    <button id="tomatoButton" type="button" class="btn btn-primary">Buy 'Pineapple's
+                      </button>
+                      <a href="E-com-cart.html">
+                        <button id="cartBtn1" type="button" class="btn btn-primary" style="float: right;">Add to Cart</button>
+                      </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <br><br>
+            
+          <footer class="container-fluid text-center">
+            <p>Online Store Copyright</p>
+            <form id="mail_form" class="form-inline">Get deals:
+              <input id="email" type="email" class="form-control" size="50" placeholder="Email Address">
+              <button id="signbtn" type="button" class="btn btn-danger">Sign Up</button>
+            </form>
+          </footer>    
+
+
+
+
+
+
+
+    </body>
+</html>
